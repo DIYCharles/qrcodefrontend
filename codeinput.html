@@ -28,7 +28,21 @@
             item.className = 'hidden';
             clickedButton.value = 'unhide'
         }
-    }}
+    }
+    var params = new URLSearchParams(window.location.search);
+
+    var id1 = params.get("id");
+    console.log(id1);
+    document.getElementById('id2').innerHTML = id1;
+
+    var name1 = params.get("name");
+    console.log(name1);
+    document.getElementById('name2').innerHTML = name1;
+
+
+    var type1 = params.get("type");
+    console.log(type1);
+    document.getElementById('type2').innerHTML = type1;}
     
     </script>
 
@@ -37,7 +51,7 @@
     <header>
     	<nav><!-- Insert navigation here --></nav>
     </header>
-    <script>
+    <!-- <script>
 
         var params = new URLSearchParams(window.location.search);
 
@@ -54,7 +68,7 @@
         console.log(type1);
         document.getElementById('type2').innerHTML = type1;
 
-      </script>
+      </script> -->
 
     <div id="info" class="hidden" role="main">
       <h1>Type: <span id="type2"></span></h1>
